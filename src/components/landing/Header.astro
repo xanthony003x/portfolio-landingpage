@@ -1,0 +1,75 @@
+---
+import Button from "../Button.astro";
+---
+
+<header class=" bg-[#424769] md:grid md:auto-rows-auto" id="home">
+    <nav class="bg-[#676f9d] text-white py-4 border-b-2 border-white">
+    
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold ml-4 border-b-2 border-b-orange-400">My Portfolio</a>
+
+            <!-- PC View Navbar -->
+    
+            <div class="hidden lg:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-gray-300 border-b-2 border-orange-400 text-lg">Home</a></li>
+                    <li><a href="#about" class="hover:text-gray-300 border-b-2 border-orange-400 text-lg">About</a></li>
+                    <li><a href="#services" class="hover:text-gray-300 border-b-2 border-orange-400 text-lg">Services</a></li>
+                    <li><a href="#experience" class="hover:text-gray-300 border-b-2 border-orange-400 text-lg">Experience</a></li>
+                    <li><a href="#works" class="hover:text-gray-300 border-b-2 border-orange-400 text-lg">Works</a></li>
+                    <li><a href="#pricing" class="hover:text-gray-300 border-b-2 border-orange-400 text-lg">Pricing Plans</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300 border-b-2 border-orange-400 text-lg">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Drawing the Hamburguer Menu -->
+    
+            <button id="mobile-menu-button" class="lg:hidden focus:outline-none mr-3">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    
+        <!-- Mobile View Navbar -->
+    
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#424769] text-white py-4">
+            <ul class="flex flex-col space-y-4 divide-y divide-orange-400">
+                <li><a href="#home" class="hover:text-gray-300 ml-6">Home</a></li>
+                    <li><a href="#about" class="hover:text-gray-300 ml-6">About</a></li>
+                    <li><a href="#services" class="hover:text-gray-300 ml-6">Services</a></li>
+                    <li><a href="#experience" class="hover:text-gray-300 ml-6">Experience</a></li>
+                    <li><a href="#works" class="hover:text-gray-300 ml-6">Works</a></li>
+                    <li><a href="#pricing" class="hover:text-gray-300 ml-6">Pricing Plans</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300 ml-6">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Presentation -->
+
+    <div class="py-8 px-8 mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-x-6 md:auto-cols-auto md:w-full md:place-items-center md:flex-row justify-around">
+        <img src="../../public/images/avatar.svg" class="block mx-auto h-44 rounded-full sm:mx-0 sm:shrink-0 bg-slate-800 md:col-start-1 md:col-end-2 md:h-80 md:w-80">
+        <div class="text-center space-y-10 flex flex-col items-center">
+            <div class="space-y-0.5">
+                <h1 class="text-3xl text-white font-semibold md:text-6xl">Jose Cabrales Silvente</h1>
+                <p class="text-gray-50 font-medium md:text-xl">I'm a programmer who is excited to learn and create.</p>
+            </div>
+            <a href="https://github.com/xanthony003x?tab=repositories" title="github link"><img src="../../public/images/github.svg" alt="github link" class="w-14 invert md:w-28"></a>
+            <Button title="Hire Me" link="#contact"/>
+        </div>
+    </div>
+</header>
+
+<!-- Hamburguer Menu Function -->
+
+<script>
+    const mobileMenuButon = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuButon.addEventListener("click", () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>

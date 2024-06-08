@@ -1,0 +1,13 @@
+---
+import Title from "../Title.astro";
+import PricingCards from "../PricingCards.astro";
+---
+
+<section id="pricing">
+    <Title title="Pricing Plans"/>
+    <div class="flex flex-col gap-6 px-12">
+        <PricingCards image="../../../public/images/bombilla.png" title="Basic" description="A simple option but poweful to manage your buisness" supported="Email support" price="9"/>
+        <PricingCards image="../../../public/images/premium.png" title="Premium" description="Unlimited product including apps integrations and more features" supported="Mon-Fri support" price="49"/>
+        <PricingCards image="../../../public/images/cohete.png" title="Ultimate" description="A wise option for large companies and individuals" supported="24/7 support" price="99" duration="Lifetime"/>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+---
+import Title from "../Title.astro";
+import Button from "../Button.astro";
+---
+
+<section id="contact">
+    <Title title="Get In Touch"/>
+    <h1 class="text-center font-semibold text-xl">Let's talk about everything!</h1>
+    <p class="text-gray-300 text-center">Don't like forms? Send me an <strong class="text-red-500 font-semibold">email</strong></p>
+
+    <form class="flex flex-col gap-4 mx-10 my-8">
+        <input type="text" placeholder="Your Name" class="rounded-2xl outline-none text-black p-3">
+        <input type="email" placeholder="Email address" class="rounded-2xl outline-none text-black p-3">
+        <input type="text" placeholder="Subject" class="rounded-2xl outline-none text-black p-3">
+        <textarea placeholder="Message" class="resize-none rounded-2xl outline-none text-black p-3"></textarea>
+        <Button title="Send Message"/>
+    </form>
+</section>

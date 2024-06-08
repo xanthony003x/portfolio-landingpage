@@ -1,0 +1,23 @@
+---
+import Button from './Button.astro'
+
+interface Props{
+    image:string
+    title:string
+    description:string
+    supported:string
+    price:string
+    duration?:string
+}
+
+const {image, title, description, supported, price, duration="Month"} = Astro.props
+---
+
+<div class="bg-white rounded-2xl flex flex-col justify-evenly items-center py-5 px-4 gap-3">
+    <img src={image} alt="card image" class="w-32">
+    <h1 class="font-bold text-3xl text-black text-center">{title}</h1>
+    <p class="text-center text-black text-lg">{description}</p>
+    <h2 class="text-gray-500">{supported}</h2>
+    <h3 class="text-black font-bold text-4xl">${price}<p class="inline text-lg"> {duration}</p></h3>
+    <Button title='Get Started'/>
+</div>
